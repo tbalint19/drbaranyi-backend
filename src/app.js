@@ -13,6 +13,7 @@ const logger = require('./middleware/logger')
 
 const user = require('./routes/user')
 const role = require('./routes/role')
+const slot = require('./routes/slot')
 const prometheus = require('./routes/actuator')
 // require routes
 
@@ -29,6 +30,7 @@ app.use(sessionUserResolver)
 
 app.use('/api/user', user)
 app.use('/api/role', role)
+app.use('/api/slot', slot)
 app.use('/actuator', prometheus)
 // use routes
 

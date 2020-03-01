@@ -2,7 +2,7 @@ module.exports = {
   verbose: true,
   collectCoverage:true,
   collectCoverageFrom: [
-    "src/routes/*.js",
+    "src/routes/**/*.js",
     "!src/routes/actuator/*.js",
     "!**/node_modules/**"
   ],

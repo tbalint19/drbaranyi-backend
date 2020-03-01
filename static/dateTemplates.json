@@ -1,0 +1,31 @@
+{
+  "oddWeek": {
+    "defaults": {
+      "zone": "Europe/Budapest", "splitLength": 15
+    },
+    "days": [
+      { "time": { "hour": 12, "minute": 0 }, "hours": 4 },
+      { "time": { "hour": 12, "minute": 0 }, "hours": 4 },
+      { "time": { "hour": 12, "minute": 0 }, "hours": 4 },
+      { "time": { "hour": 12, "minute": 0 }, "hours": 4 },
+      { "time": { "hour": 8, "minute": 30 }, "hours": 6 },
+      { "time": { "hour": 12, "minute": 0 }, "hours": 0 },
+      { "time": { "hour": 12, "minute": 0 }, "hours": 0 }
+    ]
+  },
+
+  "evenWeek": {
+    "defaults": {
+      "zone": "Europe/Budapest", "splitLength": 15
+    },
+    "days": [
+      { "time": { "hour": 16, "minute": 0 }, "hours": 4 },
+      { "time": { "hour": 12, "minute": 0 }, "hours": 4 },
+      { "time": { "hour": 12, "minute": 0 }, "hours": 4 },
+      { "time": { "hour": 14, "minute": 0 }, "hours": 4 },
+      { "time": { "hour": 12, "minute": 0 }, "hours": 4 },
+      { "time": { "hour": 12, "minute": 0 }, "hours": 0 },
+      { "time": { "hour": 12, "minute": 0 }, "hours": 0 }
+    ]
+  }
+}
