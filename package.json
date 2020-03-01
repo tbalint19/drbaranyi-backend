@@ -1,0 +1,52 @@
+{
+  "name": "drbaranyi-backed",
+  "version": "2.0.0",
+  "description": "Backend for drbaranyi.hu",
+  "author": "TBalint19",
+  "private": true,
+  "scripts": {
+    "migrate": "node_modules/.bin/sequelize db:migrate",
+    "reset": "node ./scripts/resetDB.js",
+    "start": "cross-env NODE_ENV=development DEBUG=app node ./bin/www",
+    "prod": "cross-env NODE_ENV=production node ./bin/www",
+    "format": "./node_modules/.bin/prettier --write '{src,test}/**/*'",
+    "format-check": "./node_modules/.bin/prettier --check '{src,test}/**/*'",
+    "test:unit": "jest test/unit --env node --config jest.unit.config.js",
+    "test:integration": "jest test/integration --env node --config jest.integration.config.js",
+    "sonar-check": "node CI/sonar",
+    "ci": "npm run format-check && npm run test:unit && npm run test:integration && npm run sonar-check && npm audit",
+    "cd": "node CD",
+    "cicd": "npm run ci && npm run cd"
+  },
+  "dependencies": {
+    "@promster/express": "^3.2.0",
+    "@promster/server": "^3.2.0",
+    "atob": "^2.1.2",
+    "axios": "^0.19.0",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.5",
+    "cross-env": "^5.0.1",
+    "debug": "^3.1.0",
+    "express": "^4.16.2",
+    "express-async-errors": "^3.1.1",
+    "express-validator": "^6.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.7.0",
+    "pg": "^6.1.0",
+    "prom-client": "^11.5.3",
+    "querystring": "^0.2.0",
+    "rotating-file-stream": "^1.4.3",
+    "sequelize": "^5.19.0",
+    "sequelize-cli": "^5.5.0"
+  },
+  "devDependencies": {
+    "axios-mock-adapter": "^1.17.0",
+    "jest": "^24.9.0",
+    "mockdate": "^2.0.5",
+    "prettier": "1.18.2",
+    "sonarqube-scanner": "^2.4.1",
+    "sqlite3": "^4.1.0",
+    "supertest": "^4.0.0"
+  }
+}
